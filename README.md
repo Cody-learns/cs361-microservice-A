@@ -67,7 +67,7 @@ else:
 ````
 
 ## UML Diagram
-
+![UML Diagram](UML_Diagram.png)
 
 
 

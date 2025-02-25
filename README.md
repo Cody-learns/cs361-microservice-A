@@ -20,7 +20,7 @@ For your convenience, if the default port 5555 interferes with an existing servi
 Using ZeroMQ, connect to the microservice at tcp://localhost:5555 and send a request with a payload that adheres to JSON example provided below. 
 
 **Example call:**
-````
+````python
 # Set ZMQ context and socket connection
 context = zmq.Context()
 socket = context.socket(zmq.REQ)
@@ -46,7 +46,7 @@ The only required Key-Value pair is "data" with a corresponding list of numbers 
 The microservice returns a .png of the generated histogram as raw binary data. This data can be stored in a variable and saved to a file locally. 
 
 **Example call:**
-````
+````python
 # Recieve request
 response = socket.recv()
 
@@ -58,7 +58,7 @@ f.write(response)
 Note: The microservice does have some minor data validation and error handling. If an error is encountered, it will be sent back in the response as a string. As a result, it is recommended to first check the content of the response for any such error so that you can handle it correctly: 
 
 **Example Error Check:**
-````
+````python
 # Check for errors
 if response.startswith(b"Error"):
     print(response.decode())

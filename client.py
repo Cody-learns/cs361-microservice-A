@@ -34,4 +34,6 @@ else:
     with open("example.png", "wb") as f:
         f.write(response)
         print("Histogram recieved! Opening now...")
+
+        # Change below if you're not running windows
         os.startfile("example.png")

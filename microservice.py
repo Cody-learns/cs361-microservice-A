@@ -55,8 +55,3 @@ while True:
     except Exception as e:
         socket.send_string(f"Error: {str(e)}")
         print(f"Response sent: There was an error: {str(e)}")
-
-
-
-
-

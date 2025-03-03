@@ -17,8 +17,8 @@ while True:
 
     message = socket.recv().decode()
 
-    # Print confirmation of reciept to console
-    print("Request recieved!")
+    # Print confirmation of receipt to console
+    print("Request received!")
 
     # Parse payload
     try:
@@ -32,7 +32,7 @@ while True:
         # Validate payload data
         if not isinstance(data, list) or not all(isinstance(i, (int, float)) for i in data):
             socket.send_string("Error: Invalid request, 'data' must be a list of numbers")
-            print("Response sent: Invalid data was recieved :(")
+            print("Response sent: Invalid data was received :(")
             continue
 
         # Create histogram

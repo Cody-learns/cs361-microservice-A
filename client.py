@@ -22,7 +22,7 @@ payload = {
 input = input("Press enter to send the test payload...")
 socket.send_json(payload)
 
-# Recieve request
+# Receive request
 response = socket.recv()
 
 # Check for errors
@@ -33,7 +33,7 @@ if response.startswith(b"Error"):
 else:
     with open("example.png", "wb") as f:
         f.write(response)
-        print("Histogram recieved! Opening now...")
+        print("Histogram received! Opening now...")
 
         # Change below if you're not running windows
         os.startfile("example.png")
